@@ -60,7 +60,11 @@ def delete_album():
 
 def albums_by_artist():
     artist = input("Please enter the artist: ")
-  
+    album_names = [album["Artist"] for album in albums]
+    if artist in album_names:
+        #??????
+    else:
+        print("Artist does not exist")
 
 
 def show_menu():
