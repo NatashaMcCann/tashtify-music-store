@@ -62,9 +62,17 @@ def albums_by_artist():
     artist = input("Please enter the artist: ")
     album_names = [album["Artist"] for album in albums]
     if artist in album_names:
-        #??????
+        return search_albums(artist)
     else:
         print("Artist does not exist")
+
+
+def search_albums(artist):
+    for album in albums:
+        if album["Artist"] == artist:
+            print(album['Name'])
+        else:
+            pass
 
 
 def show_menu():
